@@ -25,13 +25,13 @@ Print the output and end the program.
 #Program to for getting the word count from a text.
 #Developed by:PRAVIN KUMAR A
 #Register Number:212223230155
-import sys
-fp=open(sys.argv[0],'r')
-count=0
-for line in fp:
-    list1=line.split()
-    count+=len(list1)
-print('Number of words in a file',count)
+import pandas as pd
+df=pd.read_csv('/Users/pravi/Downloads/nba.csv')
+print(df.head(10))
+print(df.tail(5))
+print("Number of rows:",len(df.axes[0]))
+print("Number of columns:",len(df.axes[1]))
+print(df.shape)
 ```
 ## OUTPUT:
 
